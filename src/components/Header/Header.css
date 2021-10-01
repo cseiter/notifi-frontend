@@ -1,0 +1,14 @@
+.headerContainer {
+    width: 100%;
+    border: 2px solid green;
+}
+
+.logo {
+    border: 2px solid red;
+    padding: 2px;
+}
+
+.companyName {
+    border: 2px solid orange;
+    padding: 2px;
+}
