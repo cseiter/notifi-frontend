@@ -1,5 +1,6 @@
 import React from 'react';
 import basic_app_logo from './basic_app_logo.png';
+import './Header.css';
 
 function Header() {
 
