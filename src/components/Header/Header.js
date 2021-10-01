@@ -6,11 +6,13 @@ function Header() {
 
     return (
         <main>
-            <div className="logo">
-                <img src={basic_app_logo} width="100" height="40" alt="Notifi logo"/>
-            </div>
-            <div className="companyName">
-                Notifi Ticketing System
+            <div className="headerContainer">
+                <div className="logo">
+                    <img src={basic_app_logo} width="100" height="40" alt="Notifi logo"/>
+                </div>
+                <div className="companyName">
+                    Notifi Ticketing System
+                </div>
             </div>
         </main>
     );

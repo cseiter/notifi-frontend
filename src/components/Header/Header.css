@@ -1,4 +1,9 @@
 .headerContainer {
+    display: grid;
+    grid-template-areas: "logo companyName";
+    grid-template-columns: 120px 4fr;
+    grid-template-rows: 1fr;
+    grid-gap: 20px;
     width: 100%;
     border: 2px solid green;
 }
@@ -6,9 +11,12 @@
 .logo {
     border: 2px solid red;
     padding: 2px;
+    flex: 1;
+    grid-area: logo;
 }
 
 .companyName {
     border: 2px solid orange;
     padding: 2px;
+    grid-area: companyName;
 }
