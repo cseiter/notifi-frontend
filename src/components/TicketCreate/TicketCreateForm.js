@@ -41,10 +41,10 @@ function TicketCreateForm({onCreateTicket}) {
 
     return (
         <center>
-        <div>
-            <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
+            <div className="form-group">
                 <label htmlFor="ticket_title">Ticket Title</label>
-                <input className="text"
+                <input className="form-control"
                     type="text"
                     name="ticket_title"
                     onChange={handleChange}
@@ -52,16 +52,16 @@ function TicketCreateForm({onCreateTicket}) {
                     placeholder="ex: Hip printer not working"
                 />
                 <label htmlFor="ticket_details">Ticket Details</label>
-                <input className="textarea"
-                    type="textarea"
-                    style={{minHeight:100, minWidth:300}}
+                <textarea
+                    className="form-control"
+                    rows="5"
                     name="ticket_details"
                     onChange={handleChange}
                     value={formData.ticket_details}
                     placeholder="ex: hip printer unable to print, wireless is connected but no label is coming out"
                 />
                 <label htmlFor="devices_id">Choose Device Affected</label>
-                <input className="text"
+                <input className="form-control"
                     type="text"
                     name="devices_id"
                     onChange={handleChange}
@@ -69,7 +69,7 @@ function TicketCreateForm({onCreateTicket}) {
                     placeholder="Enter device type affected"
                 />
                 <label htmlFor="stations_title">Choose Station Affected</label>
-                <input className="text" 
+                <input className="form-control"
                     type="text"
                     name="stations_id"
                     onChange={handleChange}
@@ -83,8 +83,8 @@ function TicketCreateForm({onCreateTicket}) {
                 type="submit"
                 className="btn btn-success"
                 />
-            </form>
-        </div>
+            </div>
+        </form>
         </center>
     );
 };
