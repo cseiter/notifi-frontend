@@ -1,9 +1,8 @@
 import React from 'react';
-import './TicketsAll.css';
+import './TicketOverview.css';
 
-function TicketsAllCard({ticket}) {
+function TicketOverviewCard({ticket}) {
     const {id,ticket_title,ticket_number, created_at,updated_at,users_id,devices_id,stations_id,status_id} = ticket;
-    console.log(ticket);
 
     return (
         <div className="ticketRow">
@@ -21,4 +20,4 @@ function TicketsAllCard({ticket}) {
 
     }
 
-export default TicketsAllCard;
+export default TicketOverviewCard;

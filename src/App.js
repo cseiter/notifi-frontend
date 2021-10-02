@@ -1,6 +1,6 @@
 import './App.css';
 import Header from './components/Header/Header.js';
-import TicketsAllPage from './components/TicketsAll/TicketsAllPage';
+import TicketOverviewPage from './components/TicketOverview/TicketOverviewPage';
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
         <Header />
       </header>
       <main>
-        <TicketsAllPage />
+        <TicketOverviewPage />
       </main>
     </div>
   );

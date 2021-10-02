@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
-import TicketsAllContainer from './TicketsAllContainer';
+import TicketOverviewContainer from './TicketOverviewContainer';
 
-function TicketsAllPage() {
+function TicketOverviewPage() {
   const [ticketsAll,setTicketsAll] = useState([]);
 
   useEffect(() => {
@@ -15,11 +15,11 @@ function TicketsAllPage() {
       <header>
         <h1>Tickets</h1>
       </header>
-      <TicketsAllContainer
+      <TicketOverviewContainer
       ticketsAll={ticketsAll}
       />
     </main>
 );
 }
 
-export default TicketsAllPage;
+export default TicketOVerviewPage;
