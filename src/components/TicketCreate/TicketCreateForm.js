@@ -49,19 +49,12 @@ function TicketCreateForm({onCreateTicket}) {
                 />
                 <br />
                 <input 
-                type="text"
-                name="ticket_number"
+                type="textarea"
+                style={{minHeight:100, minWidth:300}}
+                name="ticket_details"
                 onChange={handleChange}
-                value={formData.ticket_number}
-                placeholder="Enter ticket number"
-                />
-                <br />
-                <input 
-                type="text"
-                name="users_id"
-                onChange={handleChange}
-                value={formData.users_id}
-                placeholder="Enter ticket owner"
+                value={formData.ticket_details}
+                placeholder="Enter ticket details"
                 />
                 <br />
                 <input 
