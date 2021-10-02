@@ -1,15 +1,23 @@
 table {
     width:98%;
-    border: 2px solid purple;
     border-collapse: collapse;
     margin: 1%;
 }
 
 th {
-    border: 2px solid green;
+    background-color: #457B9D;
+    color: #F1FAEE;
 }
 
 td {
-    border: 2px solid blue;
     width: auto;
+}
+
+tr:nth-child(even) {
+    background-color: #A8DADC;
+}
+
+tr {
+    background-color: #F1FAEE;
+
 }
