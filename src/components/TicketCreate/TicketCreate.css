@@ -1,22 +1,22 @@
-table {
-    width:98%;
-    border-collapse: collapse;
-    margin: 1%;
+DIV.table {
+    display:table;
+    width: 90%;
 }
 
-th {
-    background-color: #457B9D;
-    color: #F1FAEE;
+FORM.tr, DIV.tr {
+    display: table-row;
 }
 
-td {
-    width: auto;
-}
-
-tr:nth-child(even) {
+SPAN.td {
+    display: table-cell;
     background-color: #A8DADC;
+    width: auto;
+    padding: 5px;
+    text-align: center;
+    vertical-align: middle;
 }
 
-tr {
-    background-color: #F1FAEE;
+.textarea, .text {
+    border-radius: 5px;
+    overflow-wrap: break-word;
 }

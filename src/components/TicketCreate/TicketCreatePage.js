@@ -11,7 +11,7 @@ function TicketCreatePage() {
 return (
     <main>
       <header>
-        <h1>New Ticket</h1>
+        <h2><center>New Ticket</center></h2>
       </header>
       <TicketCreateForm onCreateTicket={handleCreateTicket}/>
     </main>
