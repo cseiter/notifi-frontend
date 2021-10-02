@@ -1,19 +1,31 @@
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Tabs, Tab} from "react-bootstrap";
 import Header from './components/Header/Header.js';
 import TicketOverviewPage from './components/TicketOverview/TicketOverviewPage';
 import TicketCreatePage from './components/TicketCreate/TicketCreatePage';
+import HomePage from './components/HomePage';
 
 function App() {
   return (
-    <div>
+    <>
       <header>
         <Header />
       </header>
       <main>
-        <TicketOverviewPage />
-        <TicketCreatePage />
+        <Tabs fill defaultActiveKey="home" fullWidth={true} indicatorColor="secondary" centered>
+          <Tab eventKey="home" title="Home">
+            <HomePage />
+          </Tab>
+          <Tab eventKey="TicketOverview" title="Ticket Overview">
+            <TicketOverviewPage />
+          </Tab>
+          <Tab eventKey="TicketCreate" title="New Ticket">
+            <TicketCreatePage />
+          </Tab>
+        </Tabs>
       </main>
-    </div>
+    </>
   );
 }
 
