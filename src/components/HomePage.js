@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Link} from 'react-router-dom';
 function HomePage() {
 
     return(
+        <center>
     <div>
         <br />
         <h3>NoTiFi</h3>
@@ -18,6 +19,7 @@ function HomePage() {
             <Link to={{ pathname: "https://github.com/cseiter"}} target="_blank" rel="noopener noreferrer"><img alt="github logo" width="100" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" /> Github</Link>
         </Router>
     </div>
+    </center>
     )
 };
 

@@ -7,13 +7,18 @@ import TicketCreatePage from './components/TicketCreate/TicketCreatePage';
 import HomePage from './components/HomePage';
 
 function App() {
+
+  function handleChange() {
+    this.forceUpdate();
+  };
+
   return (
     <>
       <header>
         <Header />
       </header>
       <main>
-        <Tabs fill defaultActiveKey="home" fullWidth={true} indicatorColor="secondary" centered>
+        <Tabs fill defaultActiveKey="home" fullWidth={true} indicatorColor="secondary" centered onClick={handleChange}>
           <Tab eventKey="home" title="Home">
             <HomePage />
           </Tab>
