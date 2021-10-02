@@ -1,4 +1,5 @@
 import React from 'react';
+import './TicketOverview.css';
 import TicketOverviewCard from './TicketOverviewCard';
 
 function TicketOverviewContainer({tickets}) {
@@ -13,7 +14,18 @@ function TicketOverviewContainer({tickets}) {
         <section>
             <h2>Current Tickets</h2>
             <table>
-            {ticketOverviewCards}
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Number</th>
+                    <th>Created</th>
+                    <th>Updated</th>
+                    <th>Owner</th>
+                    <th>Device Type</th>
+                    <th>Station Location</th>
+                    <th>Status</th>
+                </tr>
+                {ticketOverviewCards}
             </table>
         </section>
     );

@@ -5,7 +5,6 @@ function TicketOverviewCard({indTicket}) {
     const {id,ticket_title,ticket_number,created_at,updated_at,users_id,devices_id,stations_id,status_id} = indTicket;
 
     return (
-        <div className="ticketRow">
             <tr>
                 <td>{id}</td>
                 <td>{ticket_title}</td>
@@ -17,7 +16,6 @@ function TicketOverviewCard({indTicket}) {
                 <td>{stations_id}</td>
                 <td>{status_id}</td>
             </tr>
-        </div>
         );
 
     }

@@ -12,9 +12,6 @@ function TicketOverviewPage() {
 
   return (
     <main>
-      <header>
-        <h1>Tickets</h1>
-      </header>
       <TicketOverviewContainer
       tickets={tickets}
       />

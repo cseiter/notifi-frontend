@@ -1,0 +1,15 @@
+table {
+    width:98%;
+    border: 2px solid purple;
+    border-collapse: collapse;
+    margin: 1%;
+}
+
+th {
+    border: 2px solid green;
+}
+
+td {
+    border: 2px solid blue;
+    width: auto;
+}
