@@ -6,15 +6,17 @@ function TicketOverviewCard({indTicket}) {
 
     return (
         <div className="ticketRow">
-            {id}
-            {ticket_title}
-            {ticket_number}
-            {created_at}
-            {updated_at}
-            {users_id}
-            {devices_id}
-            {stations_id}
-            {status_id}
+            <tr>
+                <td>{id}</td>
+                <td>{ticket_title}</td>
+                <td>{ticket_number}</td>
+                <td>{created_at}</td>
+                <td>{updated_at}</td>
+                <td>{users_id}</td>
+                <td>{devices_id}</td>
+                <td>{stations_id}</td>
+                <td>{status_id}</td>
+            </tr>
         </div>
         );
 

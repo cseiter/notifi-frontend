@@ -12,7 +12,9 @@ function TicketOverviewContainer({tickets}) {
     return (
         <section>
             <h2>Current Tickets</h2>
+            <table>
             {ticketOverviewCards}
+            </table>
         </section>
     );
 }
