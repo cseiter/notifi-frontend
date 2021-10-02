@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 
+
 function TicketCreateForm({onCreateTicket}) {
 
     const [formData, setFormData] = useState({
@@ -40,23 +41,26 @@ function TicketCreateForm({onCreateTicket}) {
         <div>
             <form onSubmit={handleSubmit}>
                 <h2>Create New Support Ticket</h2>
+                <label htmlFor="ticket_title">Ticket Title</label>
                 <input 
                 type="text"
                 name="ticket_title"
                 onChange={handleChange}
                 value={formData.ticket_title}
-                placeholder="Enter ticket title"
+                placeholder="ex: Hip printer not working"
                 />
                 <br />
+                <label htmlFor="ticket_details">Ticket Details</label>
                 <input 
                 type="textarea"
                 style={{minHeight:100, minWidth:300}}
                 name="ticket_details"
                 onChange={handleChange}
                 value={formData.ticket_details}
-                placeholder="Enter ticket details"
+                placeholder="ex: hip printer unable to print, wireless is connected but no label is coming out"
                 />
                 <br />
+                <label htmlFor="devices_id">Choose Device Affected</label>
                 <input 
                 type="text"
                 name="devices_id"
@@ -65,6 +69,7 @@ function TicketCreateForm({onCreateTicket}) {
                 placeholder="Enter device type affected"
                 />
                 <br />
+                <label htmlFor="stations_title">Choose Station Affected</label>
                 <input 
                 type="text"
                 name="stations_id"
@@ -76,7 +81,7 @@ function TicketCreateForm({onCreateTicket}) {
                 <br />
                 <input 
                 name="submit"
-                value="+"
+                value="Create Ticket"
                 type="submit"
                 className="btn btn-success"
                 />
