@@ -41,65 +41,41 @@ function TicketCreateForm({onCreateTicket}) {
 
     return (
         <center>
-        <div className="table">
+        <div>
             <form onSubmit={handleSubmit}>
-                <div className="tr">
-                    <span className="td">
-                        <label htmlFor="ticket_title">Ticket Title</label>
-                    </span>
-                    <span className="td">
-                        <input className="text"
-                        type="text"
-                        name="ticket_title"
-                        onChange={handleChange}
-                        value={formData.ticket_title}
-                        placeholder="ex: Hip printer not working"
-                        />
-                    </span>
-                </div>
-                <div className="tr">
-                    <span className="td">
-                        <label htmlFor="ticket_details">Ticket Details</label>
-                    </span>
-                    <span className="td">
-                        <input className="textarea"
-                        type="textarea"
-                        style={{minHeight:100, minWidth:300}}
-                        name="ticket_details"
-                        onChange={handleChange}
-                        value={formData.ticket_details}
-                        placeholder="ex: hip printer unable to print, wireless is connected but no label is coming out"
-                         />
-                    </span>
-                </div>
-                <div className="tr">
-                    <span className="td">
-                        <label htmlFor="devices_id">Choose Device Affected</label>
-                    </span>
-                    <span className="td">
-                        <input className="text"
-                        type="text"
-                        name="devices_id"
-                        onChange={handleChange}
-                        value={formData.devices_id}
-                        placeholder="Enter device type affected"
-                        />
-                    </span>
-                </div>
-                <div className="tr">
-                    <span className="td">
-                        <label htmlFor="stations_title">Choose Station Affected</label>
-                    </span>
-                    <span className="td">
-                        <input className="text" 
-                        type="text"
-                        name="stations_id"
-                        onChange={handleChange}
-                        value={formData.stations_id}
-                        placeholder="Enter station area"
-                        />
-                    </span>
-                </div>
+                <label htmlFor="ticket_title">Ticket Title</label>
+                <input className="text"
+                    type="text"
+                    name="ticket_title"
+                    onChange={handleChange}
+                    value={formData.ticket_title}
+                    placeholder="ex: Hip printer not working"
+                />
+                <label htmlFor="ticket_details">Ticket Details</label>
+                <input className="textarea"
+                    type="textarea"
+                    style={{minHeight:100, minWidth:300}}
+                    name="ticket_details"
+                    onChange={handleChange}
+                    value={formData.ticket_details}
+                    placeholder="ex: hip printer unable to print, wireless is connected but no label is coming out"
+                />
+                <label htmlFor="devices_id">Choose Device Affected</label>
+                <input className="text"
+                    type="text"
+                    name="devices_id"
+                    onChange={handleChange}
+                    value={formData.devices_id}
+                    placeholder="Enter device type affected"
+                />
+                <label htmlFor="stations_title">Choose Station Affected</label>
+                <input className="text" 
+                    type="text"
+                    name="stations_id"
+                    onChange={handleChange}
+                    value={formData.stations_id}
+                    placeholder="Enter station area"
+                />
                 <br />
                 <input
                 name="submit"
