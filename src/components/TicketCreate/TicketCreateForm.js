@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import './TicketCreate.css';
+//import './TicketCreate.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
