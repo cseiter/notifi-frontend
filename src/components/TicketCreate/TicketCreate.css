@@ -1,0 +1,22 @@
+table {
+    width:98%;
+    border-collapse: collapse;
+    margin: 1%;
+}
+
+th {
+    background-color: #457B9D;
+    color: #F1FAEE;
+}
+
+td {
+    width: auto;
+}
+
+tr:nth-child(even) {
+    background-color: #A8DADC;
+}
+
+tr {
+    background-color: #F1FAEE;
+}
