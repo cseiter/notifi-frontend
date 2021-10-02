@@ -5,7 +5,7 @@ function TicketCreatePage() {
   const [tickets,setTickets] = useState([]);
 
   function handleCreateTicket(newTicket) {
-    setTickets([...categories, newTicket]);
+    setTickets([...tickets, newTicket]);
   }
 
 return (
@@ -13,7 +13,7 @@ return (
       <header>
         <h1>New Ticket</h1>
       </header>
-      <CategoryForm onCreateTicket={handleCreateTicket}/>
+      <TicketCreateForm onCreateTicket={handleCreateTicket}/>
     </main>
 );
 }
