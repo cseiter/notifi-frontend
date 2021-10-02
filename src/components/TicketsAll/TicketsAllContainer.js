@@ -1,18 +1,18 @@
 import React from 'react';
 import TicketsAllCard from './TicketsAllCard';
 
-function TicketsAllContainer( {tickets}) {
+function TicketsAllContainer({tickets}) {
     const TicketsAllCards = tickets.map((ticket) => (
         <TicketsAllCard
             key={ticket.id}
-            indTicketTitle={ticket_title}
-            indTicketNumber={ticket_number}
-            indTicketCreate={created_at}
-            indTicketUpdate={updated_at}
-            indTicketOwner={users_id}
-            indTicketDevice={devices_id}
-            indTicketStation={stations_id}
-            indTicketStatus={status_id}
+            indTicketTitle={ticket.ticket_title}
+            indTicketNumber={ticket.ticket_number}
+            indTicketCreate={ticket.created_at}
+            indTicketUpdate={ticket.updated_at}
+            indTicketOwner={ticket.users_id}
+            indTicketDevice={ticket.devices_id}
+            indTicketStation={ticket.stations_id}
+            indTicketStatus={ticket.status_id}
         />
     ));
 
