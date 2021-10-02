@@ -1,11 +1,11 @@
 import React from 'react';
 import TicketOverviewCard from './TicketOverviewCard';
 
-function TicketOverviewContainer({ticket}) {
-    const ticketOverviewCards = ticket.map((ticket) => (
+function TicketOverviewContainer({tickets}) {
+    const ticketOverviewCards = tickets.map((ticket) => (
         <TicketOverviewCard
             key={ticket.id}
-            ticket_overview={ticket}
+            indTicket={ticket}
         />
     ));
 

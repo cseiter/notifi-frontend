@@ -2,12 +2,12 @@ import React, {useEffect, useState} from 'react';
 import TicketOverviewContainer from './TicketOverviewContainer';
 
 function TicketOverviewPage() {
-  const [ticketsAll,setTicketsAll] = useState([]);
+  const [tickets,setTickets] = useState([]);
 
   useEffect(() => {
     fetch('https://ancient-retreat-67722.herokuapp.com/tickets')
     .then((r) => r.json())
-    .then(setTicketsAll);
+    .then(setTickets);
   },[]);
 
   return (
@@ -16,10 +16,10 @@ function TicketOverviewPage() {
         <h1>Tickets</h1>
       </header>
       <TicketOverviewContainer
-      ticketsAll={ticketsAll}
+      tickets={tickets}
       />
     </main>
 );
 }
 
-export default TicketOVerviewPage;
+export default TicketOverviewPage;
