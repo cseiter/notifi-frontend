@@ -12,7 +12,7 @@ function TicketOverviewContainer({tickets}) {
 
     return (
         <section>
-            <h2>Current Tickets</h2>
+            <h2><center>Current Tickets</center></h2>
             <table>
                 <tr>
                     <th>ID</th>
