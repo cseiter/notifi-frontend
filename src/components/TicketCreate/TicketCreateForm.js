@@ -25,7 +25,7 @@ function TicketCreateForm({onCreateTicket}) {
         const newTicket = {...formData};
         console.log(newTicket);
 
-        fetch('https://radiant-waters-01618.herokuapp.com/categories', {
+        fetch('https://ancient-retreat-67722.herokuapp.com/tickets', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
