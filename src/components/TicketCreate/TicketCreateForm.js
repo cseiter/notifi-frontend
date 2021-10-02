@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-//import './TicketCreate.css';
+import './TicketCreate.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -41,6 +41,7 @@ function TicketCreateForm({onCreateTicket}) {
 
     return (
         <center>
+            <div className="CreateTicket">
         <form onSubmit={handleSubmit}>
             <div className="form-group">
                 <label htmlFor="ticket_title">Ticket Title</label>
@@ -85,6 +86,7 @@ function TicketCreateForm({onCreateTicket}) {
                 />
             </div>
         </form>
+        </div>
         </center>
     );
 };
