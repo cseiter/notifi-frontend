@@ -9,14 +9,25 @@
 }
 
 .logo {
+    /* first div element, controls height of rest in row */
+    display:flex;
+    align-items: center;
     border: 2px solid red;
     padding: 2px;
     flex: 1;
     grid-area: logo;
+    height: 50px; 
 }
 
 .companyName {
+    display:flex;
+    align-items: center;
     border: 2px solid orange;
     padding: 2px;
     grid-area: companyName;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
 }
