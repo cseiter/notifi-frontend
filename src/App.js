@@ -1,5 +1,6 @@
 import './App.css';
 import Header from './components/Header/Header.js';
+import TicketsAllPage from './components/TicketsAll/TicketsAllPage';
 
 function App() {
   return (
@@ -7,6 +8,9 @@ function App() {
       <header>
         <Header />
       </header>
+      <main>
+        <TicketsAllPage />
+      </main>
     </div>
   );
 }
