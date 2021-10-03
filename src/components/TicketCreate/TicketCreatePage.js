@@ -1,8 +1,14 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import TicketCreateForm from './TicketCreateForm';
 
 function TicketCreatePage() {
   const [tickets,setTickets] = useState([]);
+
+  useEffect(() => {
+    fetch('https://ancient-retreat-67722.herokuapp.com/tickets')
+    .then((r) => r.json())
+    .then(setTickets);
+  },[]);
 
   function handleCreateTicket(newTicket) {
     setTickets([...tickets, newTicket]);
