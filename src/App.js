@@ -8,17 +8,13 @@ import HomePage from './components/HomePage';
 
 function App() {
 
-  function handleChange() {
-    this.forceUpdate();
-  };
-
   return (
     <>
       <header>
         <Header />
       </header>
       <main>
-        <Tabs fill defaultActiveKey="home" fullWidth={true} indicatorColor="secondary" centered onClick={handleChange}>
+        <Tabs fill defaultActiveKey="home" fullWidth={true} indicatorColor="secondary" centered>
           <Tab eventKey="home" title="Home">
             <HomePage />
           </Tab>
