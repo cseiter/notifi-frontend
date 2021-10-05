@@ -4,6 +4,7 @@ import {Tabs, Tab} from "react-bootstrap";
 import Header from './components/Header/Header.js';
 import TicketOverviewPage from './components/TicketOverview/TicketOverviewPage';
 import TicketCreatePage from './components/TicketCreate/TicketCreatePage';
+import TicketDetailsPage from './components/TicketDetails/TicketDetailsPage';
 import HomePage from './components/HomePage';
 
 function App() {
@@ -23,6 +24,9 @@ function App() {
           </Tab>
           <Tab eventKey="TicketCreate" title="New Ticket">
             <TicketCreatePage />
+          </Tab>
+          <Tab eventKey="TicketDetails" title="Ticket Details">
+            <TicketDetailsPage />
           </Tab>
         </Tabs>
       </main>
