@@ -1,7 +1,7 @@
 import React from 'react';
 import './TicketDetails.css';
 
-function TicketOverviewCard({indTicket}) {
+function TicketDetailsCard({indTicket}) {
     const {id,ticket_title,ticket_details,created_at,updated_at,users_id,devices_id,stations_id,status_id} = indTicket;
 
     return (
@@ -28,4 +28,4 @@ function TicketOverviewCard({indTicket}) {
         );
     }
 
-export default TicketOverviewCard;
+export default TicketDetailsCard;
