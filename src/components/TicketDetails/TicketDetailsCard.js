@@ -1,5 +1,6 @@
 import React from 'react';
 import './TicketDetails.css';
+import moment from 'moment';
 
 function TicketDetailsCard({indTicket}) {
     const {id,ticket_title,ticket_details,created_at,updated_at,users_id,devices_id,stations_id,status_id} = indTicket;
@@ -16,8 +17,8 @@ function TicketDetailsCard({indTicket}) {
                 <td rowspan="3" colspan="2">{ticket_details}</td>
             </tr>
             <tr>
-                <td className="section">Created At: {created_at}< br/>
-                Last Updated At: {updated_at}</td>
+                <td className="section">Created At: {moment({created_at}).format("llll")}< br/>
+                Last Updated At: {moment({updated_at}).format("llll")}</td>
             </tr>
             <tr>
                 <td className="section">Ticket Owner ID: {users_id}<br />
