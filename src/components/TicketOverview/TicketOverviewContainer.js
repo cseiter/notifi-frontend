@@ -2,11 +2,12 @@ import React from 'react';
 import './TicketOverview.css';
 import TicketOverviewCard from './TicketOverviewCard';
 
-function TicketOverviewContainer({tickets}) {
+function TicketOverviewContainer({tickets,onDeleteTicket}) {
     const ticketOverviewCards = tickets.map((ticket) => (
         <TicketOverviewCard
             key={ticket.id}
             indTicket={ticket}
+            onDeleteTicket={onDeleteTicket}
         />
     ));
 

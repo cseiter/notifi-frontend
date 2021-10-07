@@ -10,10 +10,16 @@ function TicketOverviewPage() {
     .then(setTickets);
   },[]);
 
+  function handleDeleteTicket(ticketToDelete) {
+    const updatedTickets = tickets.filter((ticket) => ticket.id !== ticketToDelete.id);
+    setTickets(updatedTickets);
+  }
+
   return (
     <main>
       <TicketOverviewContainer
       tickets={tickets}
+      onDeleteTicket={handleDeleteTicket}
       />
     </main>
 );
