@@ -2,8 +2,22 @@ import React from 'react';
 import './TicketDetails.css';
 import moment from 'moment';
 
-function TicketDetailsCard({indTicket}) {
+function TicketDetailsCard({indTicket, onCompleteTicket}) {
     const {id,ticket_title,ticket_details,created_at,updated_at,users_id,devices_id,stations_id,status_id} = indTicket;
+
+    function handleCompletedClick() {
+        const updateObj = {status: indTicket.status_id = 2
+        };
+        fetch(`https://ancient-retreat-67722.herokuapp.com/tickets/${id}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(updateObj),
+        })
+        .then((r) => r.json())
+        .then(onCompleteTicket);
+    }
 
     return (
         <tbody>
@@ -14,7 +28,7 @@ function TicketDetailsCard({indTicket}) {
             <tr>
                 <td className="section">Device Affected ID: {devices_id}<br />
                 Station Affected ID: {stations_id}</td>
-                <td rowspan="3" colspan="2">{ticket_details}</td>
+                <td rowSpan="4">{ticket_details}</td>
             </tr>
             <tr>
                 <td className="section">Created At: {moment({created_at}).format("ll")}< br/>
@@ -23,6 +37,12 @@ function TicketDetailsCard({indTicket}) {
             <tr>
                 <td className="section">Ticket Owner ID: {users_id}<br />
                 Ticket Status ID: {status_id}</td>
+            </tr>
+            <tr>
+                <td  className="section">
+                Ticket Controls<br />
+                <button onClick={handleCompletedClick}>Mark as completed</button>
+                </td>
             </tr>
         </tbody>
         );
