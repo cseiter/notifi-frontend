@@ -2,12 +2,12 @@ import React from 'react';
 import './TicketDetails.css';
 import TicketDetailsCard from './TicketDetailsCard';
 
-function TicketDetailsContainer({tickets, onUpdateTicket}) {
+function TicketDetailsContainer({tickets, onCompleteTicket}) {
     const ticketDetailsCards = tickets.map((ticket) => (
         <TicketDetailsCard
             key={ticket.id}
             indTicket={ticket}
-            onUpdateTicket={onUpdateTicket}
+            onCompleteTicket={onCompleteTicket}
         />
     ));
 
