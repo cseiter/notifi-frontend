@@ -15,7 +15,7 @@ function App() {
         <Header />
       </header>
       <main>
-        <Tabs fill defaultActiveKey="home" fullWidth={true} indicatorColor="secondary" centered>
+        <Tabs fill defaultActiveKey="home" fullwidth="true" indicatorcolor="secondary" centered="true">
           <Tab eventKey="home" title="Home">
             <HomePage />
           </Tab>

@@ -25,7 +25,7 @@ function TicketOverviewCard({indTicket,onDeleteTicket}) {
                 <td>{devices_id}</td>
                 <td>{stations_id}</td>
                 <td>{status_id}</td>
-                <button type="button" className="btn btn-danger" onClick={handleDeleteClick}>X</button>
+                <td><button type="button" className="btn btn-danger" onClick={handleDeleteClick}>X</button></td>
             </tr>
             </tbody>
         );

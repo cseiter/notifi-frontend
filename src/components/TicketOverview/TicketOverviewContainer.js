@@ -15,7 +15,8 @@ function TicketOverviewContainer({tickets,onDeleteTicket}) {
         <section>
             <h2><center>Current Tickets</center></h2>
             <table>
-                <tr>
+                <thead>
+                    <tr>
                     <th>ID</th>
                     <th>Title</th>
                     <th>Number</th>
@@ -25,7 +26,9 @@ function TicketOverviewContainer({tickets,onDeleteTicket}) {
                     <th>Device Type</th>
                     <th>Station Location</th>
                     <th>Status</th>
-                </tr>
+                    <th>Delete</th>
+                    </tr>
+                </thead>
                 {ticketOverviewCards}
             </table>
         </section>
