@@ -6,7 +6,8 @@ function TicketDetailsCard({indTicket, onCompleteTicket}) {
     const {id,ticket_title,ticket_details,created_at,updated_at,users_id,devices_id,stations_id,status_id} = indTicket;
 
     function handleCompletedClick() {
-        const updateObj = {status: indTicket.status_id = 2
+        console.log(`marking ticket ${id} as completed.`)
+        const updateObj = {status: indTicket.status_id = "2"
         };
         fetch(`https://ancient-retreat-67722.herokuapp.com/tickets/${id}`, {
             method: "PATCH",
