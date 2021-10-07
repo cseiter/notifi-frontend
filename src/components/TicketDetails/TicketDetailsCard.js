@@ -17,8 +17,8 @@ function TicketDetailsCard({indTicket}) {
                 <td rowspan="3" colspan="2">{ticket_details}</td>
             </tr>
             <tr>
-                <td className="section">Created At: {moment({created_at}).format("llll")}< br/>
-                Last Updated At: {moment({updated_at}).format("llll")}</td>
+                <td className="section">Created At: {moment({created_at}).format("ll")}< br/>
+                Last Updated At: {moment({updated_at}).format("ll")}</td>
             </tr>
             <tr>
                 <td className="section">Ticket Owner ID: {users_id}<br />
