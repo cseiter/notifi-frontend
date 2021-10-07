@@ -7,7 +7,6 @@ function TicketDetailsCard({indTicket}) {
     return (
         <tbody>
             <tr>
-                <td>Back to main button</td>
                 <td>{id}</td>
                 <td>{ticket_title}</td>
             </tr>
