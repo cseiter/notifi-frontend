@@ -6,22 +6,22 @@ function TicketDetailsCard({indTicket}) {
 
     return (
         <tbody>
-            <tr>
-                <td>{id}</td>
-                <td>{ticket_title}</td>
+            <tr className="title">
+                <td className="title">Ticket ID: {id}</td>
+                <td className="title">{ticket_title}</td>
             </tr>
             <tr>
-                <td>{devices_id}<br />
-                {stations_id}</td>
+                <td>Device Affected ID: {devices_id}<br />
+                Station Affected ID: {stations_id}</td>
                 <td rowspan="3" colspan="2">{ticket_details}</td>
             </tr>
             <tr>
-                <td>{created_at}< br/>
-                {updated_at}</td>
+                <td>Created At: {created_at}< br/>
+                Last Updated At: {updated_at}</td>
             </tr>
             <tr>
-                <td>{users_id}<br />
-                {status_id}</td>
+                <td>Ticket Owner ID: {users_id}<br />
+                Ticket Status ID: {status_id}</td>
             </tr>
         </tbody>
         );
