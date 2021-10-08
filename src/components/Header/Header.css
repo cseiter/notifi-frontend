@@ -12,7 +12,6 @@
     /* first div element, controls height of rest in row */
     display:flex;
     align-items: center;
-    border: 2px solid red;
     padding: 2px;
     flex: 1;
     grid-area: logo;
@@ -22,9 +21,12 @@
 .companyName {
     display:flex;
     align-items: center;
-    border: 2px solid orange;
     padding: 2px;
     grid-area: companyName;
+    background-color: #457B9D;
+    border: 2px solid #457B9D;
+    color: #F1FAEE;
+    font-size:xx-large;
 }
 
 img {
