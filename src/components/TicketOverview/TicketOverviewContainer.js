@@ -19,7 +19,6 @@ function TicketOverviewContainer({tickets,onDeleteTicket}) {
                     <tr>
                     <th>ID</th>
                     <th>Title</th>
-                    <th>Number</th>
                     <th>Created</th>
                     <th>Updated</th>
                     <th>Owner</th>
