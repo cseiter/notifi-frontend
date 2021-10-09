@@ -6,7 +6,7 @@ function TicketDetailsPage(onCompleteTicket) {
   const [tickets,setTickets] = useState([]);
 
   useEffect(() => {
-    fetch('https://ancient-retreat-67722.herokuapp.com/tickets')
+    fetch('http://localhost:3000/tickets')
     .then((r) => r.json())
     .then(setTickets);
   },[]);

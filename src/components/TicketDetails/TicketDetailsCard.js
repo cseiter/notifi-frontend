@@ -3,13 +3,13 @@ import './TicketDetails.css';
 import moment from 'moment';
 
 function TicketDetailsCard({indTicket, onCompleteTicket}) {
-    const {id,ticket_title,ticket_details,created_at,updated_at,users_id,devices_id,stations_id,status_id} = indTicket;
+    const {id,ticket_title,ticket_details,created_at,updated_at,users_id,devices_id,stations_id,statuses_id} = indTicket;
 
     function handleCompletedClick() {
         console.log(`marking ticket ${id} as completed.`)
         const updateObj = {status: indTicket.status_id = "2"
         };
-        fetch(`https://ancient-retreat-67722.herokuapp.com/tickets/${id}`, {
+        fetch(`http:localhost/tickets/${id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",
@@ -37,7 +37,7 @@ function TicketDetailsCard({indTicket, onCompleteTicket}) {
             </tr>
             <tr>
                 <td className="section">Ticket Owner ID: {users_id}<br />
-                Ticket Status ID: {status_id}</td>
+                Ticket Status ID: {statuses_id}</td>
             </tr>
             <tr>
                 <td  className="section">
