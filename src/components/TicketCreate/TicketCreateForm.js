@@ -25,7 +25,7 @@ function TicketCreateForm({onCreateTicket}) {
         const newTicket = {...formData};
         console.log(newTicket);
 
-        fetch('https://localhost:3000/tickets', {
+        fetch('http://localhost:3000/tickets', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

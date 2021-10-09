@@ -5,7 +5,7 @@ function TicketCreatePage() {
   const [tickets,setTickets] = useState([]);
 
   useEffect(() => {
-    fetch('https://localhost:3000/tickets')
+    fetch('http://localhost:3000/tickets')
     .then((r) => r.json())
     .then(setTickets);
   },[]);
