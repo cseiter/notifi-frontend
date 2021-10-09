@@ -8,11 +8,8 @@ function TicketCreateForm({onCreateTicket}) {
     const [formData, setFormData] = useState({
         ticket_title: "",
         ticket_details: "",
-        ticket_number: "",
-        users_id: "",
         devices_id: "",
         stations_id: "",
-        status_id: "",
     });
 
     function handleChange(e) {
@@ -28,7 +25,7 @@ function TicketCreateForm({onCreateTicket}) {
         const newTicket = {...formData};
         console.log(newTicket);
 
-        fetch('https://ancient-retreat-67722.herokuapp.com/tickets', {
+        fetch('https://localhost:3000/tickets', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
