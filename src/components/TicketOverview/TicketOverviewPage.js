@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import './TicketOverview.css';
 import TicketOverviewContainer from './TicketOverviewContainer';
 
 function TicketOverviewPage() {

@@ -16,7 +16,7 @@ function TicketOverviewCard({indTicket,onDeleteTicket}) {
 
     return (
         <tbody>
-            <tr>
+            <tr className="test">
                 <td><Router><Link to={{ pathname: `http://localhost:3000/tickets`}} target="_blank" rel="noopener noreferrer">{id}</Link></Router></td>
                 <td>{ticket_title}</td>
                 <td>{created_at}</td>

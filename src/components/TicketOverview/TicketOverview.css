@@ -7,17 +7,23 @@ table {
 th {
     background-color: #457B9D;
     color: #F1FAEE;
+    margin: 5px;
+    padding: 5px;
 }
 
 td {
     width: auto;
     margin: 5px;
     padding: 5px;
+    border: 1px solid #457B9D;
 }
 
 tr:nth-child(even) {
     background-color: #A8DADC;
-    border-bottom: 1px solid #457B9D;
+}
+
+.test {
+    background-color: red;
 }
 
 tr:nth-child(odd) {
