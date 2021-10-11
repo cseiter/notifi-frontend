@@ -1,4 +1,5 @@
 import React from 'react';
+import {BrowserRouter as Router, Link} from 'react-router-dom';
 import './TicketOverview.css';
 
 function TicketOverviewCard({indTicket,onDeleteTicket}) {
@@ -16,7 +17,7 @@ function TicketOverviewCard({indTicket,onDeleteTicket}) {
     return (
         <tbody>
             <tr>
-                <td>{id}</td>
+                <td><Router><Link to={{ pathname: `http://localhost:3000/tickets`}} target="_blank" rel="noopener noreferrer">{id}</Link></Router></td>
                 <td>{ticket_title}</td>
                 <td>{created_at}</td>
                 <td>{updated_at}</td>
