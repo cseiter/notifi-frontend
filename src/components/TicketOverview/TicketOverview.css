@@ -11,13 +11,15 @@ th {
 
 td {
     width: auto;
+    margin: 5px;
+    padding: 5px;
 }
 
 tr:nth-child(even) {
     background-color: #A8DADC;
+    border-bottom: 1px solid #457B9D;
 }
 
-tr {
+tr:nth-child(odd) {
     background-color: #F1FAEE;
-
 }
