@@ -5,6 +5,7 @@ import Header from './components/Header/Header.js';
 import TicketOverviewPage from './components/TicketOverview/TicketOverviewPage';
 import TicketCreatePage from './components/TicketCreate/TicketCreatePage';
 import TicketDetailsPage from './components/TicketDetails/TicketDetailsPage';
+import TicketWithCommentsPage from './components/TicketWithComments/TicketWithCommentsPage';
 import HomePage from './components/HomePage';
 
 function App() {
@@ -27,6 +28,9 @@ function App() {
           </Tab>
           <Tab eventKey="TicketDetails" title="Ticket Details">
             <TicketDetailsPage />
+          </Tab>
+          <Tab eventKey="TicketWithComments" title="Ticket With Comments">
+            <TicketWithCommentsPage />
           </Tab>
         </Tabs>
       </main>

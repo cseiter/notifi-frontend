@@ -4,8 +4,8 @@ import TicketWithCommentsCard from './TicketWithCommentsCard';
 function TicketWithCommentsContainer({comments,onDeleteComment}) {
     const ticketWithCommentsCards = comments.map((comment) => (
         <TicketWithCommentsCard
-            key={ticket.id}
-            comments={comment}
+            key={comment.id}
+            indComment={comment}
             onDeleteComment={onDeleteComment}
         />
     ));
