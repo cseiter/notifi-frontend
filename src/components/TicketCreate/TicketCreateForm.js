@@ -34,6 +34,7 @@ function TicketCreateForm({onCreateTicket}) {
         })
         .then((r) => r.json())
         .then(onCreateTicket);
+        window.location.reload(true);
     }
 
     return (
