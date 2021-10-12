@@ -29,7 +29,7 @@ function App() {
           <Tab eventKey="TicketDetails" title="Ticket Details">
             <TicketDetailsPage />
           </Tab>
-          <Tab eventKey="TicketWithComments" title="Ticket With Comments">
+          <Tab eventKey="TicketWithComments" title="Ticket Comments">
             <TicketWithCommentsPage />
           </Tab>
         </Tabs>
