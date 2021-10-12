@@ -6,10 +6,9 @@ function TicketOverviewCard({indTicket,onDeleteTicket}) {
     const {id,ticket_title,created_at,updated_at,users_id,devices_id,stations_id,statuses_id} = indTicket;
 
     function handleDeleteClick() {
-        fetch(`httplocalhost:3000/tickets/${id}`, {
+        fetch(`http://localhost:3000/tickets/${id}`, {
             method: "DELETE",
     })
-    .then((r) => r.json())
     .then(() => {onDeleteTicket(indTicket);
     });
 }
