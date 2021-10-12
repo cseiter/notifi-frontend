@@ -7,16 +7,14 @@ function TicketDetailsCard({indTicket, onCompleteTicket}) {
 
     function handleCompletedClick() {
         console.log(`marking ticket ${id} as completed.`)
-        const updateObj = {status: indTicket.status_id = "2"
-        };
-        fetch(`http:localhost/tickets/${id}`, {
+        const updateObj = {status: indTicket.statuses_id = "2"};
+        fetch(`http://localhost/tickets/${id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify(updateObj),
         })
-        .then((r) => r.json())
         .then(onCompleteTicket);
     }
 
