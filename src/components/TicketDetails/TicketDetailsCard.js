@@ -2,7 +2,7 @@ import React from 'react';
 import './TicketDetails.css';
 import moment from 'moment';
 
-function TicketDetailsCard({indTicket, onCompleteTicket}) {
+function TicketDetailsCard({indTicket, onCompleteTicket, onProgressTicket, onResponseTicket}) {
     const {id,ticket_title,ticket_details,created_at,updated_at,users_id,devices_id,stations_id,statuses_id} = indTicket;
 
     function handleCompletedClick() {
@@ -16,6 +16,32 @@ function TicketDetailsCard({indTicket, onCompleteTicket}) {
             body: JSON.stringify(updateObj),
         })
         .then(onCompleteTicket);
+    }
+
+    function handleResponseClick() {
+        console.log(`marking ticket ${id} as awaiting response.`)
+        const updateObj = {status: indTicket.statuses_id = "3"};
+        fetch(`http://localhost/tickets/${id}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(updateObj),
+        })
+        .then(onResponseTicket);
+    }
+
+    function handleProgressClick() {
+        console.log(`marking ticket ${id} as in progress.`)
+        const updateObj = {status: indTicket.statuses_id = "1"};
+        fetch(`http://localhost/tickets/${id}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(updateObj),
+        })
+        .then(onProgressTicket);
     }
 
     return (
@@ -40,7 +66,9 @@ function TicketDetailsCard({indTicket, onCompleteTicket}) {
             <tr>
                 <td  className="section">
                 Ticket Controls<br />
-                <button onClick={handleCompletedClick}>Mark as completed</button>
+                <button onClick={handleCompletedClick}>Mark as completed</button><br />
+                <button onClick={handleProgressClick}>Mark as in progress</button><br />
+                <button onClick={handleResponseClick}>Mark as awaiting response</button>
                 </td>
             </tr>
         </tbody>

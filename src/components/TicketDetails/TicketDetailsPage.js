@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import './TicketDetails.css';
 import TicketDetailsContainer from './TicketDetailsContainer';
 
-function TicketDetailsPage(onCompleteTicket) {
+function TicketDetailsPage(onCompleteTicket,onProgressTicket,onResponseTicket) {
   const [tickets,setTickets] = useState([]);
 
   useEffect(() => {
@@ -16,6 +16,8 @@ function TicketDetailsPage(onCompleteTicket) {
       <TicketDetailsContainer
       tickets={tickets}
       onCompleteTicket={onCompleteTicket}
+      onResponseTicket={onResponseTicket}
+      onProgressTicket={onProgressTicket}
       />
     </main>
 );
