@@ -6,7 +6,7 @@ function TicketDetailsPage(onCompleteTicket,onProgressTicket,onResponseTicket) {
   const [tickets,setTickets] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/tickets')
+    fetch('https://desolate-wave-23214.herokuapp.com/tickets')
     .then((r) => r.json())
     .then(setTickets);
   },[]);
