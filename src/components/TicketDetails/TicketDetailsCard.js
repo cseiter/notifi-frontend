@@ -7,7 +7,8 @@ function TicketDetailsCard({indTicket, onCompleteTicket, onProgressTicket, onRes
 
     function handleCompletedClick() {
         console.log(`marking ticket ${id} as completed.`)
-        const updateObj = {status: indTicket.statuses_id = "2"};
+        const updateObj = {statuses_id: indTicket.statuses_id = "2"};
+        console.log(updateObj)
         fetch(`https://desolate-wave-23214.herokuapp.com/tickets/${id}`, {
             method: "PATCH",
             headers: {
@@ -20,7 +21,7 @@ function TicketDetailsCard({indTicket, onCompleteTicket, onProgressTicket, onRes
 
     function handleResponseClick() {
         console.log(`marking ticket ${id} as awaiting response.`)
-        const updateObj = {status: indTicket.statuses_id = "3"};
+        const updateObj = {statuses_id: indTicket.statuses_id = "3"};
         fetch(`https://desolate-wave-23214.herokuapp.com/tickets/${id}`, {
             method: "PATCH",
             headers: {
@@ -33,7 +34,7 @@ function TicketDetailsCard({indTicket, onCompleteTicket, onProgressTicket, onRes
 
     function handleProgressClick() {
         console.log(`marking ticket ${id} as in progress.`)
-        const updateObj = {status: indTicket.statuses_id = "1"};
+        const updateObj = {statuses_id: indTicket.statuses_id = "1"};
         fetch(`https://desolate-wave-23214.herokuapp.com/tickets/${id}`, {
             method: "PATCH",
             headers: {
