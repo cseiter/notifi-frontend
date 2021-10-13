@@ -5,7 +5,7 @@ function TicketWithCommentsPage() {
   const [comments,setComments] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/tickets/1/comments')
+    fetch('https://desolate-wave-23214.herokuapp.com/tickets/1/comments')
     .then((r) => r.json())
     .then(setComments);
   },[]);

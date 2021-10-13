@@ -4,7 +4,7 @@ function TicketWithCommentsCard({indComment,onDeleteComment}) {
     const {id,comment,user_id,created_at} = indComment;
 
     function handleDeleteClick() {
-        fetch(`http://localhost:3000/tickets/1/comments/${id}`, {
+        fetch(`https://desolate-wave-23214.herokuapp.com/comments/${id}`, {
             method: "DELETE",
     })
     .then((r) => r.json())
