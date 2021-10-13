@@ -25,7 +25,7 @@ function TicketCreateForm({onCreateTicket}) {
         const newTicket = {...formData};
         console.log(newTicket);
 
-        fetch('http://localhost:3000/tickets', {
+        fetch('https://desolate-wave-23214.herokuapp.com/tickets', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
