@@ -16,10 +16,8 @@ function App() {
         <Header />
       </header>
       <main>
-        <Tabs fill defaultActiveKey="home" fullwidth="true" indicatorcolor="secondary" centered="true">
-          <Tab eventKey="home" title="Home">
-            <HomePage />
-          </Tab>
+        <Tabs fill defaultActiveKey="TicketOverview" fullwidth="true" indicatorcolor="secondary" centered="true">
+
           <Tab eventKey="TicketOverview" title="Ticket Overview">
             <TicketOverviewPage />
           </Tab>
@@ -28,6 +26,9 @@ function App() {
           </Tab>
           <Tab eventKey="TicketDetails" title="Ticket Details">
             <TicketDetailsPage />
+          </Tab>
+          <Tab eventKey="about" title="About">
+            <HomePage />
           </Tab>
           <Tab eventKey="TicketWithComments" title="Ticket Comments COMING SOON!" disabled="True">
             <TicketWithCommentsPage />
