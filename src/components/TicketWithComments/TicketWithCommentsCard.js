@@ -1,4 +1,6 @@
 import React from 'react';
+//import moment from 'moment';
+import './TicketWithComment.css';
 
 function TicketWithCommentsCard({indComment,onDeleteComment, onCompleteTicket, onProgressTicket, onResponseTicket}) {
     const {id,comment,user_id,created_at,ticket} = indComment;
@@ -83,11 +85,11 @@ function TicketWithCommentsCard({indComment,onDeleteComment, onCompleteTicket, o
                 </td>
             </tr>
             <tr>
-                <td>Written by: {user_id} at {created_at}:</td>
-                <td><button type="button" className="btn btn-danger" onClick={handleDeleteClick}>X</button></td>
+                <td colSpan="2">Written by: {user_id} at {created_at}:</td>
             </tr>
             <tr>
                 <td>{comment}</td>
+                <td><button type="button" className="btn btn-danger" onClick={handleDeleteClick}>X - Delete Comment</button></td>
             </tr>
             </tbody>
         );
