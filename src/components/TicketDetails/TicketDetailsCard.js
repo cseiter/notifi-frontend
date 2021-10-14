@@ -3,7 +3,7 @@ import './TicketDetails.css';
 import moment from 'moment';
 
 function TicketDetailsCard({indTicket, onCompleteTicket, onProgressTicket, onResponseTicket}) {
-    const {id,ticket_title,ticket_details,created_at,updated_at,users_id,devices_id,stations_id,statuses_id} = indTicket;
+    const {id,ticket_title,ticket_details,created_at,updated_at,devices_id,stations_id,statuses_id} = indTicket;
     //const arrStatus = {0:"none",1:"Work In Progress",2:"Completed",3:"Awaiting Correspondence"}
 
     function handleCompletedClick() {
