@@ -21,7 +21,6 @@ function TicketOverviewContainer({tickets,onDeleteTicket}) {
                     <th>Title</th>
                     <th>Created</th>
                     <th>Updated</th>
-                    <th>Owner</th>
                     <th>Device Type</th>
                     <th>Station Location</th>
                     <th>Status</th>

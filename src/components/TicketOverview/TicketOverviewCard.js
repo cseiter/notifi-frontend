@@ -2,7 +2,7 @@ import React from 'react';
 import './TicketOverview.css';
 
 function TicketOverviewCard({indTicket,onDeleteTicket}) {
-    const {id,ticket_title,created_at,updated_at,users_id,devices_id,stations_id,statuses_id} = indTicket;
+    const {id,ticket_title,created_at,updated_at,devices_id,stations_id,statuses_id} = indTicket;
 
     function handleDeleteClick() {
         fetch(`https://desolate-wave-23214.herokuapp.com/tickets/${id}`, {
@@ -19,7 +19,6 @@ function TicketOverviewCard({indTicket,onDeleteTicket}) {
                 <td>{ticket_title}</td>
                 <td>{created_at}</td>
                 <td>{updated_at}</td>
-                <td>{users_id}</td>
                 <td>{devices_id}</td>
                 <td>{stations_id}</td>
                 <td>{statuses_id}</td>
