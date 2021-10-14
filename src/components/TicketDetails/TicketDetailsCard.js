@@ -4,6 +4,7 @@ import moment from 'moment';
 
 function TicketDetailsCard({indTicket, onCompleteTicket, onProgressTicket, onResponseTicket}) {
     const {id,ticket_title,ticket_details,created_at,updated_at,users_id,devices_id,stations_id,statuses_id} = indTicket;
+    //const arrStatus = {0:"none",1:"Work In Progress",2:"Completed",3:"Awaiting Correspondence"}
 
     function handleCompletedClick() {
         console.log(`marking ticket ${id} as completed.`)
@@ -17,6 +18,7 @@ function TicketDetailsCard({indTicket, onCompleteTicket, onProgressTicket, onRes
             body: JSON.stringify(updateObj),
         })
         .then(onCompleteTicket);
+        window.location.reload(true);
     }
 
     function handleResponseClick() {
@@ -30,6 +32,7 @@ function TicketDetailsCard({indTicket, onCompleteTicket, onProgressTicket, onRes
             body: JSON.stringify(updateObj),
         })
         .then(onResponseTicket);
+        window.location.reload(true);
     }
 
     function handleProgressClick() {
@@ -43,6 +46,7 @@ function TicketDetailsCard({indTicket, onCompleteTicket, onProgressTicket, onRes
             body: JSON.stringify(updateObj),
         })
         .then(onProgressTicket);
+        window.location.reload(true);
     }
 
     return (
@@ -61,15 +65,15 @@ function TicketDetailsCard({indTicket, onCompleteTicket, onProgressTicket, onRes
                 Last Updated At: {moment({updated_at}).format("ll")}</td>
             </tr>
             <tr>
-                <td className="section">Ticket Owner ID: {users_id}<br />
+                <td className="section">{/* Ticket Owner ID: {users_id}<br /> */}
                 Ticket Status ID: {statuses_id}</td>
             </tr>
             <tr>
                 <td  className="section">
                 Ticket Controls<br />
-                <button onClick={handleCompletedClick}>Mark as completed</button><br />
-                <button onClick={handleProgressClick}>Mark as in progress</button><br />
-                <button onClick={handleResponseClick}>Mark as awaiting response</button>
+                <button onClick={handleProgressClick}>Mark as in progress (1)</button><br />
+                <button onClick={handleCompletedClick}>Mark as completed (2)</button><br />
+                <button onClick={handleResponseClick}>Mark as awaiting response (3)</button>
                 </td>
             </tr>
         </tbody>
