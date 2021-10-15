@@ -58,7 +58,7 @@ function TicketCreateForm({onCreateTicket}) {
                     value={formData.ticket_details}
                     placeholder="ex: hip printer unable to print, wireless is connected but no label is coming out"
                 />
-                <label htmlFor="devices_id">Choose Device Affected</label>
+                {/* <label htmlFor="devices_id">Choose Device Affected</label>
                 <input className="form-control"
                     type="text"
                     name="devices_id"
@@ -73,7 +73,7 @@ function TicketCreateForm({onCreateTicket}) {
                     onChange={handleChange}
                     value={formData.stations_id}
                     placeholder="Enter station area"
-                />
+                /> */}
                 <br />
                 <input
                 name="submit"
